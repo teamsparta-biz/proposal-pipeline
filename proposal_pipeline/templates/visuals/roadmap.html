@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  {{TOKENS_CSS}}
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: var(--viewport-w);
+    height: var(--viewport-h);
+    font-family: var(--font-family);
+    background: var(--color-bg-default);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    padding: 32px 40px 20px;
+  }
+
+  .header-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .header-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--color-brand);
+    border-radius: 50%;
+  }
+
+  .header-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-brand);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .header-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+  }
+
+  /* ── 로드맵 타임라인 ── */
+  .timeline {
+    flex: 1;
+    display: flex;
+    gap: 0;
+    padding: 0 40px 32px;
+    align-items: stretch;
+  }
+
+  .phase {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .phase-top {
+    text-align: center;
+    padding: 0 12px 16px;
+  }
+
+  .phase-number {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-text-subtle);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .phase-period {
+    font-size: 15px;
+    color: var(--color-text-muted);
+  }
+
+  /* ── 타임라인 바 ── */
+  .timeline-track {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    position: relative;
+  }
+
+  .timeline-bar {
+    flex: 1;
+    height: 4px;
+    background: var(--color-border);
+  }
+
+  .phase:first-child .timeline-bar { border-radius: 2px 0 0 2px; }
+  .phase:last-child .timeline-bar { border-radius: 0 2px 2px 0; }
+
+  .timeline-dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--color-white);
+    border: 3px solid var(--color-text-primary);
+    z-index: 1;
+  }
+
+  .phase:last-child .timeline-dot {
+    border-color: var(--color-brand);
+    background: var(--color-brand);
+  }
+
+  /* ── 페이즈 카드 ── */
+  .phase-card {
+    margin: 16px 8px 0;
+    flex: 1;
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .phase:last-child .phase-card {
+    border-color: var(--color-brand);
+    background: linear-gradient(180deg, #fff5f7, #fff);
+  }
+
+  .phase-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 4px;
+  }
+
+  .phase-subtitle {
+    font-size: 14px;
+    color: var(--color-text-subtle);
+    margin-bottom: 14px;
+  }
+
+  .phase-desc {
+    font-size: 15.5px;
+    color: var(--color-text-body);
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .phase-activities {
+    list-style: none;
+    margin-top: auto;
+  }
+
+  .phase-activities li {
+    font-size: 15px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    padding: 3px 0 3px 14px;
+    position: relative;
+  }
+
+  .phase-activities li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-border);
+  }
+
+  .phase:last-child .phase-activities li::before {
+    background: var(--color-brand);
+    opacity: 0.5;
+  }
+
+  /* ── 하단 요약 ── */
+  .summary {
+    margin: 0 40px 32px;
+    padding: 16px 28px;
+    background: var(--color-text-primary);
+    color: var(--color-white);
+    border-radius: 12px;
+    font-size: 17px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .summary-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--color-brand);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .summary-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: #fff;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-bar">
+      <div class="header-dot"></div>
+      <span class="header-label">ROADMAP</span>
+    </div>
+    <div class="header-title">{{HEADER_TITLE}}</div>
+  </div>
+
+  <div class="timeline">
+    {{PHASES}}
+  </div>
+
+  {{SUMMARY}}
+</body>
+</html>

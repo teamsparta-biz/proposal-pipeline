@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  {{TOKENS_CSS}}
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: var(--viewport-w);
+    height: var(--viewport-h);
+    font-family: var(--font-family);
+    background: var(--color-bg-default);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    padding: 32px 40px 20px;
+  }
+
+  .header-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .header-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--color-brand);
+    border-radius: 50%;
+  }
+
+  .header-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-brand);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .header-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+  }
+
+  /* ── 솔루션 카드 ── */
+  .stages {
+    display: flex;
+    gap: 24px;
+    padding: 0 40px;
+    margin-bottom: 24px;
+  }
+
+  .stage-card {
+    flex: 1;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 28px 24px 24px;
+    position: relative;
+    background: var(--color-white);
+    transition: border-color 0.2s;
+  }
+
+  .stage-card:last-child {
+    border-color: var(--color-brand);
+    background: linear-gradient(135deg, #fff5f7, #fff);
+  }
+
+  .stage-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--color-text-primary);
+    color: var(--color-white);
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .stage-card:last-child .stage-number {
+    background: var(--color-brand);
+  }
+
+  .stage-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 4px;
+  }
+
+  .stage-subtitle {
+    font-size: 15px;
+    color: var(--color-text-subtle);
+    margin-bottom: 14px;
+  }
+
+  .stage-desc {
+    font-size: 16px;
+    color: var(--color-text-body);
+    line-height: 1.65;
+  }
+
+  .stage-items {
+    list-style: none;
+    margin-top: 12px;
+  }
+
+  .stage-items li {
+    font-size: 15.5px;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 4px;
+  }
+
+  .stage-items li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-border);
+  }
+
+  .stage-card:last-child .stage-items li::before {
+    background: var(--color-brand);
+    opacity: 0.5;
+  }
+
+  /* ── 핵심 원칙 ── */
+  .principles {
+    display: flex;
+    gap: 20px;
+    padding: 0 40px;
+    margin-bottom: 24px;
+  }
+
+  .principle {
+    flex: 1;
+    background: #f8f9fb;
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .principle-icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background: var(--color-text-primary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .principle-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: #fff;
+  }
+
+  .principle-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 4px;
+  }
+
+  .principle-desc {
+    font-size: 15.5px;
+    color: var(--color-text-muted);
+    line-height: 1.55;
+  }
+
+  /* ── 하단 배너 ── */
+  .bottom-banner {
+    margin: auto 40px 32px;
+    padding: 18px 28px;
+    background: var(--color-brand);
+    color: var(--color-white);
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .bottom-banner strong {
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-bar">
+      <div class="header-dot"></div>
+      <span class="header-label">SOLUTION</span>
+    </div>
+    <div class="header-title">{{HEADER_TITLE}}</div>
+  </div>
+
+  <div class="stages">
+    {{STAGES}}
+  </div>
+
+  <div class="principles">
+    {{PRINCIPLES}}
+  </div>
+
+  {{BANNER}}
+</body>
+</html>

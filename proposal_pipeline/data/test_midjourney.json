@@ -1,0 +1,48 @@
+[
+  {
+    "id": "midjourney-visual",
+    "name": "Midjourney 비주얼 AI 실전 과정",
+    "total_hours": "6시간",
+    "table_pages": [
+      {
+        "label": "",
+        "rows": [
+          {
+            "subject": "AI 이미지 생성 패러다임 이해",
+            "hours": "1시간",
+            "content": "• 텍스트-투-이미지(Text-to-Image) 기술의 핵심 원리와 비즈니스 활용 가치 이해\n• Midjourney, DALL-E, Stable Diffusion 등 주요 생성형 이미지 AI 비교 분석\n• 저작권·초상권·상표권 등 AI 생성 이미지의 법적 이슈와 사내 가이드라인 수립 기준\n• 마케팅, IR, 사내 커뮤니케이션 등 부서별 실제 활용 시나리오 탐색",
+            "exercise": "우리 회사 홈페이지·보고서에서 외주 제작된 이미지 3건을 찾고,\nAI로 대체했을 때의 비용·시간 절감 효과 추정"
+          },
+          {
+            "subject": "Midjourney 환경 구축 및\n기본 명령어 마스터",
+            "hours": "1.5시간",
+            "content": "• Discord 기반 Midjourney 워크스페이스 생성 및 구독 플랜 이해\n• /imagine, /blend, /describe 등 핵심 명령어 실습\n• --ar(비율), --v(버전), --s(스타일라이즈), --q(퀄리티) 파라미터 완전 정복\n• Vary, Zoom Out, Pan 등 이미지 후처리 기능으로 완성도 극대화",
+            "exercise": "동일한 프롬프트를 --s 50 / --s 250 / --s 750으로 생성하여\n스타일라이즈 값에 따른 결과물 차이를 비교 발표"
+          },
+          {
+            "subject": "비즈니스 프롬프트\n엔지니어링 심화",
+            "hours": "1.5시간",
+            "content": "• 주제(Subject) + 스타일(Style) + 분위기(Mood) + 구도(Composition) 4요소 프레임워크\n• 사진, 일러스트, 3D 렌더링, 인포그래픽 등 업무 목적별 프롬프트 템플릿 설계\n• 네거티브 프롬프트(--no)와 가중치(::) 활용으로 불필요 요소 정밀 제거\n• 일관된 브랜드 톤앤매너를 유지하는 스타일 레퍼런스(--sref) 활용법",
+            "exercise": "자사 브랜드 컬러와 톤앤매너를 반영한\n'신규 서비스 런칭 배너' 이미지 3종 제작 및 상호 피드백"
+          },
+          {
+            "subject": "업무 활용 실전 프로젝트",
+            "hours": "2시간",
+            "content": "• 실제 업무 산출물(제안서 표지, SNS 콘텐츠, 사내 뉴스레터 헤더) 중 1건 선택하여 제작\n• /describe로 레퍼런스 이미지를 역분석하고 프롬프트를 재설계하는 리버스 엔지니어링\n• Canva·PowerPoint와 연동하여 생성 이미지를 실제 디자인 템플릿에 합성\n• 팀별 최종 산출물 시연 및 'AI 이미지 활용 가이드라인' 초안 작성",
+            "exercise": "팀별로 '차기 분기 사업 보고서 표지' 이미지를 제작하고,\n프롬프트·설정값·선택 이유를 포함한 1페이지 가이드 제출"
+          }
+        ]
+      }
+    ],
+    "design_bg": {
+      "purpose": "본 과정은 <strong>Midjourney</strong>를 활용한 비주얼 AI 역량을 체계적으로 구축하기 위해 설계되었습니다.<br>단순한 이미지 생성 기술 습득을 넘어, <span class=\"highlight\">비즈니스 맥락에서의 실전 활용</span>과 브랜드 일관성 유지 역량까지 확보하여, 마케팅·기획·커뮤니케이션 부서의 시각 콘텐츠 생산성을 획기적으로 향상시키는 것을 목표로 합니다.",
+      "steps": [
+        {"title": "패러다임 전환", "subtitle": "Mindset", "description": "AI 이미지 기술의 원리와 비즈니스 활용 가치 이해"},
+        {"title": "도구 숙련", "subtitle": "Skill-up", "description": "Midjourney 환경 구축 및 핵심 명령어 마스터"},
+        {"title": "프롬프트 설계", "subtitle": "Engineering", "description": "비즈니스 목적별 프롬프트 엔지니어링 심화"},
+        {"title": "실전 프로젝트", "subtitle": "Output", "description": "실제 업무 산출물 제작 및 활용 가이드라인 수립"}
+      ]
+    },
+    "consultant_context": "비개발자 대상, 마케팅/기획/디자인 부서 실무자 중심. 실습 비중 60% 이상. Discord 사용 경험 없는 수강생 고려."
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "_comment": "단계별 SVG 아이콘 라이브러리. stroke 기반, 색상은 CSS 변수로 제어.",
+  "step_icons": [
+    {
+      "name": "mindset",
+      "label": "뇌/마인드셋",
+      "svg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M24 38V26\"/><path d=\"M16 20c0-4.4 3.6-8 8-8s8 3.6 8 8c0 3-1.7 5.7-4.2 7.1\"/><path d=\"M19.8 27.1C17.3 25.7 15.6 23 15.6 20\"/><circle cx=\"24\" cy=\"14\" r=\"2\"/><path d=\"M18 18l-2-2\"/><path d=\"M30 18l2-2\"/></svg>"
+    },
+    {
+      "name": "analyze",
+      "label": "분해/진단",
+      "svg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"12\" y=\"10\" width=\"24\" height=\"28\" rx=\"2\"/><line x1=\"20\" y1=\"10\" x2=\"20\" y2=\"38\"/><line x1=\"28\" y1=\"10\" x2=\"28\" y2=\"38\"/><line x1=\"12\" y1=\"19\" x2=\"36\" y2=\"19\"/><line x1=\"12\" y1=\"29\" x2=\"36\" y2=\"29\"/></svg>"
+    },
+    {
+      "name": "design",
+      "label": "설계/도구",
+      "svg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M28 12l8 8-16 16H12v-8L28 12z\"/><path d=\"M24 16l8 8\"/><path d=\"M34 28l4 4-4 4\"/></svg>"
+    },
+    {
+      "name": "verify",
+      "label": "검증/완성",
+      "svg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"10\" y=\"8\" width=\"28\" height=\"32\" rx=\"2\"/><polyline points=\"18,24 22,28 30,20\"/><line x1=\"16\" y1=\"14\" x2=\"32\" y2=\"14\"/><line x1=\"16\" y1=\"34\" x2=\"26\" y2=\"34\"/></svg>"
+    },
+    {
+      "name": "expand",
+      "label": "확장/반복",
+      "svg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"24\" cy=\"24\" r=\"12\"/><polyline points=\"20,24 23,27 28,21\"/></svg>"
+    }
+  ]
+}

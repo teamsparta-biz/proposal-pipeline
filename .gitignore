@@ -1,0 +1,10 @@
+__pycache__/
+*.egg-info/
+dist/
+build/
+*.pyc
+.env
+output/
+output_test/
+templates/dummy/
+desktop.ini

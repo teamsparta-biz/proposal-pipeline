@@ -1,0 +1,226 @@
+[
+  {
+    "id": "ai-rnd-workflow",
+    "name": "R&D 업무 AI 전환 실전 과정",
+    "total_hours": "4시간",
+    "table_pages": [
+      {
+        "label": "",
+        "rows": [
+          {
+            "subject": "R&D 업무와 AI의 접점 이해",
+            "hours": "1시간",
+            "content": "• 연구개발 프로세스(기획→설계→시험→분석)에서 AI가 투입될 수 있는 고효율 구간 매핑\n• ChatGPT와 Copilot의 역할 차이: 문서 생성 vs 코드 보조, R&D 부서별 최적 활용 전략\n• 기술 문서 자동 요약, 특허 선행기술 조사, 시험 데이터 1차 분석 등 즉시 적용 가능 시나리오\n• 사내 보안 정책 범위 내에서 외부 AI 도구를 안전하게 활용하는 가이드라인 수립",
+            "exercise": "내 최근 1주일 업무 리스트 중 AI로 30분 이상 절감 가능한\n업무 3건을 선별하고 예상 절감 시간 산출"
+          },
+          {
+            "subject": "ChatGPT 기반\n기술 문서 자동화",
+            "hours": "1.5시간",
+            "content": "• 시험 결과 데이터를 붙여넣고 ChatGPT로 정형화된 분석 보고서 초안을 생성하는 실습\n• 영문 논문·스펙 문서를 사내 보고 양식에 맞는 한글 기술 요약문으로 변환하는 프롬프트 설계\n• 시스템 프롬프트에 부서 용어집과 보고서 템플릿을 주입하여 일관된 출력 품질 확보\n• Custom GPT를 활용한 부서 전용 기술 문서 어시스턴트 구축 실습",
+            "exercise": "제공된 샘플 시험 성적서 데이터를 ChatGPT에 입력하여\n사내 양식에 맞는 '시험 결과 요약 보고서' 초안 작성"
+          },
+          {
+            "subject": "Copilot 기반\n데이터 분석 자동화",
+            "hours": "1시간",
+            "content": "• Excel Copilot을 활용한 대량 시험 데이터의 피벗 분석 및 이상치 탐지 자동화\n• PowerPoint Copilot으로 기술 검토 회의 발표 자료를 5분 만에 초안 생성하는 워크플로우\n• Word Copilot에 사내 기술 규격서를 참조시켜 검토 의견서를 자동 작성하는 실습",
+            "exercise": "샘플 시험 데이터 Excel 파일을 Copilot에 넣어\n자동 피벗 테이블 생성 + 이상치 하이라이팅 실습"
+          },
+          {
+            "subject": "R&D AI 활용 로드맵 수립",
+            "hours": "0.5시간",
+            "content": "• 실습한 3가지 활용 시나리오(문서 자동화, 데이터 분석, 보고서 생성)의 현업 적용 우선순위 결정\n• 부서 내 AI 도구 활용 가이드라인 초안 작성 및 팀 내 확산 전략 수립\n• 향후 자동화 확장 가능 영역(특허 분석, 설계 검증, 공정 최적화) 탐색",
+            "exercise": "오늘 배운 도구를 활용해 '우리 팀 AI 활용 액션플랜'\n1페이지를 작성하고 팀원들과 공유"
+          }
+        ]
+      }
+    ],
+    "design_bg": {
+      "purpose": "본 과정은 <strong>R&D 부서</strong>의 연구개발 업무에 AI 도구를 실질적으로 접목하기 위해 설계되었습니다.<br>단순한 AI 도구 사용법 전달을 넘어, <span class=\"highlight\">기술 문서 자동화와 데이터 분석 효율화</span>라는 R&D 고유의 페인포인트를 해결하고, 연구 생산성을 체감할 수 있는 즉시 적용 가능한 워크플로우를 확보하는 것을 목표로 합니다.",
+      "steps": [
+        {"title": "업무 진단", "subtitle": "Assessment", "description": "R&D 프로세스 내 AI 투입 고효율 구간 매핑"},
+        {"title": "문서 자동화", "subtitle": "Automation", "description": "ChatGPT 기반 기술 문서 생성 워크플로우 구축"},
+        {"title": "데이터 분석", "subtitle": "Analysis", "description": "Copilot 활용 시험 데이터 분석 자동화"},
+        {"title": "로드맵 수립", "subtitle": "Roadmap", "description": "부서 맞춤 AI 활용 액션플랜 수립"}
+      ]
+    },
+    "consultant_context": "R&D 엔지니어 대상, 코딩 경험 다양 (비개발자~중급). ChatGPT Plus 또는 Enterprise 라이선스 보유 가정. 보안 민감 데이터는 샘플로 대체. 실습 50% 이상.",
+    "persuasion_slides": [
+      {
+        "visual_type": "gap_analysis",
+        "title": "Gap 분석",
+        "subtitle": "R&D AI 역량 현황 및 목표 Gap 분석",
+        "data": {
+          "header_title": "R&D 부서 AI 역량 Gap 분석",
+          "to_be": {
+            "label": "To-Be (목표)",
+            "items": [
+              "AI 기반 기술 문서 자동 생성 체계 구축",
+              "시험 데이터 AI 분석으로 이상치 자동 탐지",
+              "연구원 1인당 주 5시간 이상 업무 시간 절감",
+              "AI 활용 표준 가이드라인 수립 및 공유"
+            ]
+          },
+          "as_is": {
+            "label": "As-Is (현재)",
+            "items": [
+              "보고서·기술문서 수동 작성에 과도한 시간 소요",
+              "시험 데이터 분석은 Excel 수작업에 의존",
+              "AI 도구 개인별 산발적 시도, 부서 표준 부재",
+              "보안 우려로 AI 도구 도입에 소극적"
+            ]
+          },
+          "gap": {
+            "label": "Gap (핵심 격차)",
+            "items": [
+              "AI 활용 실무 역량 부재 (도구 사용법 미숙)",
+              "R&D 맞춤 프롬프트 설계 경험 부족",
+              "AI 도입 보안 가이드라인 미확립",
+              "데이터 기반 의사결정 문화 미성숙"
+            ]
+          },
+          "summary": "핵심 격차를 해소하기 위해 R&D 현업 맞춤형 AI 실전 교육이 필요합니다."
+        }
+      },
+      {
+        "visual_type": "solution",
+        "title": "솔루션 제안",
+        "subtitle": "R&D AI 전환을 위한 교육 솔루션",
+        "data": {
+          "header_title": "R&D AI 전환 교육 솔루션",
+          "stages": [
+            {
+              "title": "AI 업무 매핑",
+              "subtitle": "1단계 · 진단",
+              "description": "R&D 프로세스 전 구간에서 AI 적용 가능 영역을 식별합니다.",
+              "items": ["업무 프로세스 AI 매핑", "절감 가능 시간 산출", "우선순위 도출"]
+            },
+            {
+              "title": "실전 도구 학습",
+              "subtitle": "2단계 · 숙련",
+              "description": "ChatGPT와 Copilot을 R&D 업무에 실제로 적용하는 실습을 진행합니다.",
+              "items": ["기술 문서 자동화", "데이터 분석 자동화", "보고서 초안 생성"]
+            },
+            {
+              "title": "현업 적용 체계화",
+              "subtitle": "3단계 · 확산",
+              "description": "학습 내용을 부서 표준으로 정립하고 팀 내 확산합니다.",
+              "items": ["AI 활용 가이드라인", "팀 액션플랜 수립", "확장 영역 탐색"]
+            }
+          ],
+          "principles": [
+            {
+              "title": "실습 중심 교육",
+              "description": "이론 30% + 실습 70%. 실제 R&D 데이터와 문서로 즉시 체험합니다."
+            },
+            {
+              "title": "현업 즉시 적용",
+              "description": "교육 다음 날부터 현업에 바로 적용할 수 있는 워크플로우를 제공합니다."
+            }
+          ],
+          "banner": "<strong>팀스파르타</strong>의 R&D 맞춤 교육으로 연구 생산성을 혁신하세요"
+        }
+      },
+      {
+        "visual_type": "framework",
+        "title": "커리큘럼 프레임워크",
+        "subtitle": "R&D 업무 AI 전환 실전 과정 상세",
+        "data": {
+          "header_title": "R&D 업무 AI 전환 실전 과정",
+          "duration": "4시간",
+          "target": "R&D 엔지니어",
+          "objectives": [
+            "R&D 업무 프로세스별 AI 활용 포인트를 식별할 수 있다",
+            "ChatGPT로 기술 문서/보고서 초안을 생성할 수 있다",
+            "Copilot으로 시험 데이터를 자동 분석할 수 있다",
+            "부서 AI 활용 가이드라인과 액션플랜을 수립할 수 있다"
+          ],
+          "highlights": [
+            "R&D 현업 시나리오 기반 실습 (보안 데이터는 샘플 대체)",
+            "ChatGPT + Copilot 듀얼 도구 커버",
+            "실습 비중 50% 이상, 즉시 적용 가능한 산출물 확보"
+          ],
+          "deliverables": [
+            "AI 업무 매핑표 (업무별 AI 도구 + 예상 절감 시간)",
+            "기술 문서 프롬프트 템플릿 3종",
+            "부서 AI 활용 액션플랜 1페이지"
+          ],
+          "tools": [
+            "ChatGPT (Plus/Enterprise)",
+            "Microsoft 365 Copilot (Excel, PPT, Word)",
+            "Custom GPT Builder"
+          ],
+          "keywords": ["R&D AI 전환", "기술 문서 자동화", "데이터 분석", "Copilot", "ChatGPT"]
+        }
+      },
+      {
+        "visual_type": "roadmap",
+        "title": "교육 로드맵",
+        "subtitle": "R&D AI 역량 강화 로드맵",
+        "data": {
+          "header_title": "R&D AI 역량 강화 로드맵",
+          "phases": [
+            {
+              "title": "AI 인식 전환",
+              "subtitle": "Awareness",
+              "period": "교육 1주차",
+              "description": "R&D 업무에서 AI가 어떤 가치를 만들 수 있는지 체감합니다.",
+              "activities": ["AI 업무 매핑 워크숍", "절감 시간 시뮬레이션", "보안 가이드라인 이해"]
+            },
+            {
+              "title": "도구 숙련",
+              "subtitle": "Skill-up",
+              "period": "교육 2주차",
+              "description": "ChatGPT와 Copilot을 R&D 실무에 적용하는 핵심 스킬을 학습합니다.",
+              "activities": ["기술 문서 자동화 실습", "데이터 분석 자동화 실습", "프롬프트 설계 훈련"]
+            },
+            {
+              "title": "현업 적용",
+              "subtitle": "Application",
+              "period": "교육 후 1개월",
+              "description": "학습한 AI 활용 스킬을 실제 R&D 업무에 적용합니다.",
+              "activities": ["주간 AI 활용 리포트", "팀 내 베스트 프랙티스 공유", "성과 측정"]
+            },
+            {
+              "title": "조직 확산",
+              "subtitle": "Scale-up",
+              "period": "교육 후 3개월",
+              "description": "R&D 조직 전체로 AI 활용 문화를 확산합니다.",
+              "activities": ["부서 AI 가이드라인 공식화", "타 부서 교육 확대", "자동화 파이프라인 구축"]
+            }
+          ],
+          "summary": "4시간 교육 → 1개월 현업 적용 → 3개월 내 조직 전반 AI 활용 문화 정착"
+        }
+      },
+      {
+        "visual_type": "roi",
+        "title": "기대 가치 및 ROI",
+        "subtitle": "교육 투자 대비 기대 효과",
+        "data": {
+          "header_title": "교육 투자 대비 기대 가치",
+          "values": [
+            {
+              "icon": "efficiency",
+              "metric": "30%",
+              "title": "문서 작업 시간 절감",
+              "description": "기술 보고서·시험 결과 요약 등 반복 문서 작업 시간을 AI로 대폭 절감합니다."
+            },
+            {
+              "icon": "productivity",
+              "metric": "5h+",
+              "title": "주간 업무 시간 절약",
+              "description": "연구원 1인당 주 5시간 이상의 반복 업무를 AI로 자동화하여 연구에 집중합니다."
+            },
+            {
+              "icon": "quality",
+              "metric": "100%",
+              "title": "즉시 적용 가능",
+              "description": "교육 다음 날부터 현업에 바로 적용할 수 있는 실전 워크플로우를 제공합니다."
+            }
+          ],
+          "quote": "AI 도구를 R&D 업무에 체계적으로 적용함으로써, 연구원들이 반복 업무에서 벗어나 본연의 연구·개발에 집중할 수 있는 환경을 구축합니다.",
+          "banner": "지금 시작하세요 — R&D 생산성 혁신의 첫 걸음"
+        }
+      }
+    ]
+  }
+]

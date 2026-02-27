@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  /* ── 디자인 토큰 (렌더러가 tokens.json에서 주입) ── */
+  {{TOKENS_CSS}}
+
+  @import url(var(--font-cdn));
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: var(--viewport-w);
+    height: var(--viewport-h);
+    font-family: var(--font-family);
+    background: var(--color-bg-default);
+    padding: 0;
+    overflow: hidden;
+  }
+
+  /* ── 설계 배경 및 목적 ── */
+  .purpose-section {
+    padding: var(--spacing-section-pt) var(--spacing-section-px) var(--spacing-section-pb);
+  }
+
+  .purpose-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .purpose-icon {
+    width: 22px;
+    height: 22px;
+    border: 2.5px solid var(--color-brand);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .purpose-icon svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .purpose-title {
+    font-size: var(--typo-purpose-title-size);
+    font-weight: var(--typo-purpose-title-weight);
+    color: var(--color-text-primary);
+  }
+
+  .purpose-text {
+    font-size: var(--typo-purpose-text-size);
+    line-height: var(--typo-purpose-text-line-height);
+    color: var(--color-text-body);
+    padding-left: 2px;
+  }
+
+  .purpose-text strong {
+    color: var(--color-text-primary);
+    font-weight: 700;
+  }
+
+  .purpose-text .highlight {
+    color: var(--color-brand);
+    font-weight: 700;
+  }
+
+  /* ── 교육 핵심 흐름 ── */
+  .flow-section {
+    padding: var(--spacing-flow-pt) var(--spacing-section-px) 0;
+  }
+
+  .flow-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .flow-bar {
+    width: 4px;
+    height: 22px;
+    background: var(--color-text-primary);
+    border-radius: 1px;
+  }
+
+  .flow-title {
+    font-size: var(--typo-flow-title-size);
+    font-weight: var(--typo-flow-title-weight);
+    color: var(--color-text-primary);
+  }
+
+  .flow-steps {
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+  }
+
+  .step-card {
+    flex: 1;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--spacing-card-radius);
+    padding: var(--spacing-card-py-top) var(--spacing-card-px) var(--spacing-card-py-bottom);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    color: var(--color-brand);
+  }
+
+  .step-card.last {
+    background: var(--color-brand);
+    border-color: var(--color-brand);
+  }
+
+  .step-card.last .step-number {
+    background: var(--color-white);
+    color: var(--color-brand);
+  }
+
+  .step-card.last .step-title,
+  .step-card.last .step-subtitle,
+  .step-card.last .step-desc {
+    color: var(--color-white);
+  }
+
+  .step-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    flex-shrink: 0;
+    color: var(--color-arrow);
+    font-size: 21px;
+  }
+
+  .step-number {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--color-text-primary);
+    color: var(--color-white);
+    font-size: var(--typo-step-number-size);
+    font-weight: var(--typo-step-number-weight);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .step-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .step-icon svg {
+    width: 44px;
+    height: 44px;
+  }
+
+  .step-card.last .step-icon svg path,
+  .step-card.last .step-icon svg circle,
+  .step-card.last .step-icon svg rect,
+  .step-card.last .step-icon svg line,
+  .step-card.last .step-icon svg polyline {
+    stroke: var(--color-white) !important;
+    fill: none !important;
+  }
+
+  .step-title {
+    font-size: var(--typo-step-title-size);
+    font-weight: var(--typo-step-title-weight);
+    color: var(--color-text-primary);
+    margin-bottom: 4px;
+  }
+
+  .step-subtitle {
+    font-size: var(--typo-step-subtitle-size);
+    font-weight: var(--typo-step-subtitle-weight);
+    color: var(--color-text-subtle);
+    margin-bottom: 14px;
+  }
+
+  .step-desc {
+    font-size: var(--typo-step-desc-size);
+    line-height: var(--typo-step-desc-line-height);
+    color: var(--color-text-muted);
+  }
+</style>
+</head>
+<body>
+  <div class="purpose-section">
+    <div class="purpose-header">
+      <div class="purpose-icon">
+        <svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="3" fill="currentColor"/></svg>
+      </div>
+      <span class="purpose-title">설계 배경 및 목적</span>
+    </div>
+    <div class="purpose-text">{{PURPOSE}}</div>
+  </div>
+
+  <div class="flow-section">
+    <div class="flow-header">
+      <div class="flow-bar"></div>
+      <span class="flow-title">교육 핵심 흐름</span>
+    </div>
+    <div class="flow-steps">
+      {{STEPS}}
+    </div>
+  </div>
+</body>
+</html>
